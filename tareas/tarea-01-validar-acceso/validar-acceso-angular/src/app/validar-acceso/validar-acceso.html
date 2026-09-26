@@ -1,0 +1,18 @@
+<div class="contenedor">
+  <h2>Validar Acceso al Evento</h2>
+
+  <label for="edad">Edad</label>
+  <input id="edad" type="number" [(ngModel)]="edad" placeholder="Ingrese su edad">
+
+  <label class="check">
+    <input type="checkbox" [(ngModel)]="pago"> Pagó la entrada
+  </label>
+
+  <button (click)="validar()">Validar</button>
+
+  @if (mensaje()) {
+    <p class="mensaje" [class.permitido]="permitido()" [class.denegado]="!permitido()">
+      {{ mensaje() }}
+    </p>
+  }
+</div>

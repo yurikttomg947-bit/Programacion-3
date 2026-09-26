@@ -16,7 +16,7 @@ coverage/
 .idea/
 *.iml
 .vscode/*
-!.vscode/extensions.json
+
 .classpath
 .project
 .settings/
@@ -24,3 +24,9 @@ coverage/
 # Sistema / secretos
 .DS_Store
 .env
+
+# Solo lo esencial para correr las tareas
+.vscode/
+postman/
+apuntes/
+tareas/*/*/README.md

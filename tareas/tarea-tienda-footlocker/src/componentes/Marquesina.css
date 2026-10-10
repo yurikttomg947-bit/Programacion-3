@@ -1,0 +1,30 @@
+.marquee {
+display: flex;
+height: 84px;
+align-items: center;
+justify-content: space-around;
+gap: 28px;
+overflow: hidden;
+padding: 0 4vw;
+background: var(--red);
+color: var(--white);
+font-family: "Barlow Condensed", sans-serif;
+font-size: clamp(26px, 3vw, 48px);
+font-style: italic;
+font-weight: 900;
+letter-spacing: -0.025em;
+white-space: nowrap;
+}
+
+.marquee i {
+color: var(--ink);
+font-style: normal;
+}
+
+@media (max-width: 640px) {
+.marquee {
+height: 64px;
+justify-content: flex-start;
+font-size: 27px;
+}
+}

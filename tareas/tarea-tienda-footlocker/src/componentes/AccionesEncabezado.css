@@ -1,0 +1,47 @@
+.header-actions {
+display: flex;
+grid-column: 3;
+grid-row: 1;
+justify-self: end;
+gap: 5px;
+}
+
+.bag-button {
+position: relative;
+}
+
+.bag-count {
+position: absolute;
+top: 0;
+right: 0;
+display: grid;
+width: 18px;
+height: 18px;
+place-items: center;
+border-radius: 50%;
+background: var(--red);
+color: var(--white);
+font-size: 9px;
+font-weight: 700;
+}
+
+@media (max-width: 980px) {
+.header-actions {
+grid-column: 3;
+}
+
+.search-action {
+display: none;
+}
+}
+
+@media (max-width: 640px) {
+.icon-button {
+width: 38px;
+height: 38px;
+}
+
+.header-actions .icon-button:nth-child(2) {
+display: none;
+}
+}

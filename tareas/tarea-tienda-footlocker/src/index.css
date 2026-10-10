@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,800&family=Inter:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+--ink: #111111;
+--red: #df1f2d;
+--cream: #f3f0e9;
+--white: #ffffff;
+--muted: #6f6c66;
+font-family: "Inter", sans-serif;
+color: var(--ink);
+background: var(--cream);
+font-synthesis: none;
+}
+
+* {
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+margin: 0;
+min-width: 320px;
+background: var(--cream);
+}
+
+button {
+font: inherit;
+}
+
+button,
+a {
+cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible {
+outline: 3px solid var(--red);
+outline-offset: 3px;
+}
+
+.site-shell {
+min-height: 100vh;
+overflow: hidden;
+}
+
+.icon-button,
+.favorite-button {
+display: grid;
+width: 42px;
+height: 42px;
+place-items: center;
+border: 0;
+border-radius: 50%;
+background: transparent;
+color: var(--ink);
+transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.icon-button:hover,
+.favorite-button:hover {
+background: var(--cream);
+transform: translateY(-2px);
+}
+
+.eyebrow {
+display: flex;
+align-items: center;
+gap: 12px;
+margin: 0 0 18px;
+color: var(--white);
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 0.2em;
+}
+
+.eyebrow::before {
+width: 38px;
+height: 2px;
+background: var(--red);
+content: "";
+}
+
+.hero h1,
+.section-heading h2 {
+margin: 0;
+font-family: "Barlow Condensed", sans-serif;
+font-style: italic;
+font-weight: 900;
+letter-spacing: -0.045em;
+line-height: 0.82;
+}
+
+.primary-button,
+.outline-button {
+display: inline-flex;
+min-height: 54px;
+align-items: center;
+justify-content: center;
+gap: 34px;
+padding: 0 28px;
+border: 0;
+background: var(--red);
+color: var(--white);
+font-size: 11px;
+font-weight: 800;
+letter-spacing: 0.12em;
+transition: background 180ms ease, transform 180ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+html {
+scroll-behavior: auto;
+}
+
+*,
+*::before,
+*::after {
+transition-duration: 0.01ms !important;
+}
+}

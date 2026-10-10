@@ -1,0 +1,24 @@
+.announcement {
+display: flex;
+min-height: 30px;
+align-items: center;
+justify-content: center;
+gap: 24px;
+padding: 6px 24px;
+background: var(--red);
+color: var(--white);
+font-size: 10px;
+font-weight: 700;
+letter-spacing: 0.16em;
+}
+
+@media (max-width: 640px) {
+.announcement {
+min-height: 28px;
+font-size: 8px;
+}
+
+.announcement span:nth-child(n + 2) {
+display: none;
+}
+}

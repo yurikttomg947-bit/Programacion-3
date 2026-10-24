@@ -1,0 +1,9 @@
+from saludo.application.ports.saludar_use_case import SaludarUseCase
+from saludo.domain.persona import Persona
+
+
+class SaludarService(SaludarUseCase):
+
+    def saludar(self) -> str:
+        persona = Persona("Alan")
+        return f"Hola {persona.nombre}"
